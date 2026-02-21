@@ -11,12 +11,12 @@ const Hero = () => {
         <img
           src={heroImg}
           alt="Achuei Deng Ajing in elegant red dress"
-          className="w-full h-full object-cover object-center md:object-top absolute inset-0"
+          className="w-full h-full object-cover object-[center_25%] absolute inset-0"
           aria-hidden="true"
         />
-        {/* lighter gradients so face remains visible */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/0 to-background/0" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-background/20" />
+        {/* minimal gradients so face remains fully visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
       </div>
 
       {/* Floating gold particles effect */}

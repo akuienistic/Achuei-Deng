@@ -77,7 +77,7 @@ const Events = () => {
                     </div>
                     <div>
                       <p className="text-sm text-foreground/50 font-body">Date</p>
-                      <p className="font-body font-medium">March 15, 2025</p>
+                      <p className="font-body font-medium">February 28, 2026</p>
                     </div>
                   </div>
 
@@ -87,7 +87,7 @@ const Events = () => {
                     </div>
                     <div>
                       <p className="text-sm text-foreground/50 font-body">Time</p>
-                      <p className="font-body font-medium">6:00 PM</p>
+                      <p className="font-body font-medium">12:00 PM TILL LATE</p>
                     </div>
                   </div>
 
@@ -97,7 +97,7 @@ const Events = () => {
                     </div>
                     <div>
                       <p className="text-sm text-foreground/50 font-body">Venue</p>
-                      <p className="font-body font-medium">Nairobi National Theatre</p>
+                      <p className="font-body font-medium">Centur Garden. Opp NILEPET HQS</p>
                     </div>
                   </div>
                 </div>

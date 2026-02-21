@@ -17,9 +17,12 @@ const Loader = ({ onFinish }: { onFinish: () => void }) => {
         fadeOut ? "opacity-0" : "opacity-100"
       }`}
     >
-      <h1 className="font-heading text-3xl md:text-4xl gold-text mb-8 tracking-widest">
+      <h1 className="font-heading text-3xl md:text-4xl gold-text mb-2 tracking-widest">
         ACHUEI
       </h1>
+      <p className="font-heading italic text-lg md:text-xl text-foreground/60 mb-8">
+        Queen of Afrobeats
+      </p>
       <div className="flex items-end gap-1.5 h-12">
         {[...Array(5)].map((_, i) => (
           <div

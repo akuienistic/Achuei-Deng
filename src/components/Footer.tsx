@@ -126,12 +126,12 @@ const Footer = () => {
             © {year} Achuei Deng Ajing – South Sudan. All rights reserved.
           </p>
           <p className="font-body text-xs text-muted-foreground flex items-center gap-1">
-            Designed with <Heart size={10} className="text-accent" /> by{" "}
+            Designed and built by{" "}
             <a
               href="https://www.linkedin.com/in/simon-akuien-atem-710895290"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-gold-light transition-colors duration-300 underline underline-offset-2"
+              className="text-primary hover:text-gold-light transition-colors duration-300"
             >
               Simon Star Tech
             </a>

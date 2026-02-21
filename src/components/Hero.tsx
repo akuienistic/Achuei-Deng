@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Play, Sparkles } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import heroImg from "@/assets/achuei-hero.jpg";
 
 const Hero = () => {
@@ -10,7 +11,8 @@ const Hero = () => {
         <img
           src={heroImg}
           alt="Achuei Deng Ajing in elegant red dress"
-          className="w-full h-full object-cover fill bg-center brightness-75"
+          className="w-full h-full object-cover object-center md:object-top absolute inset-0"
+          aria-hidden="true"
         />
         {/* lighter gradients so face remains visible */}
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/0 to-background/0" />

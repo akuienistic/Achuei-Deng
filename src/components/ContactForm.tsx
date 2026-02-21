@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { User, Mail, Phone, MessageSquare, CheckCircle, AlertCircle, Sparkles } from "lucide-react";
+import { User, Mail, Phone, MessageSquare, CheckCircle, AlertCircle, Sparkles, Mic2, Handshake, Music, Newspaper } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import { Badge } from "@/components/ui/badge";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -68,23 +69,25 @@ const ContactForm = () => {
               For press inquiries, concert bookings, music licensing, or partnership opportunities,
               drop a message and our team will respond within 24 hours.
             </p>
+            <Badge variant="secondary" className="mb-8">Fast Response</Badge>
 
             <div className="space-y-4">
               {[
-                "🎤 Concert & Event Bookings",
-                "🤝 Brand Collaborations & Endorsements",
-                "🎵 Music Licensing & Features",
-                "📰 Press & Media Inquiries",
-              ].map((item, i) => (
+                { icon: Mic2, label: "Concert & Event Bookings" },
+                { icon: Handshake, label: "Brand Collaborations & Endorsements" },
+                { icon: Music, label: "Music Licensing & Features" },
+                { icon: Newspaper, label: "Press & Media Inquiries" },
+              ].map((svc, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + i * 0.1 }}
-                  className="font-body text-foreground/70 text-sm"
+                  className="font-body text-foreground/70 text-sm flex items-center gap-2"
                 >
-                  {item}
+                  <svc.icon size={14} />
+                  {svc.label}
                 </motion.div>
               ))}
             </div>

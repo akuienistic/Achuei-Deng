@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { Home, User, Music, Video, Mail, Menu, X, Bell } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Home, User, Music, Video, Mail, Menu, X, Bell, Sun, Moon } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const navItems = [
   { label: "Home", href: "#home", icon: Home },

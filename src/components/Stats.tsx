@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { Play, Users, Mic2, Globe } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const stats = [
-  { icon: Play, value: "5M+", label: "Streams Worldwide" },
-  { icon: Users, value: "200K+", label: "Loyal Fans" },
+  { icon: Play, value: "5M+", label: "Streams Worldwide", badge: "#1" },
+  { icon: Users, value: "200K+", label: "Loyal Fans", badge: "Fan Favorite" },
   { icon: Mic2, value: "50+", label: "Live Performances" },
   { icon: Globe, value: "12+", label: "Countries Toured" },
 ];

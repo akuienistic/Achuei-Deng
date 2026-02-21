@@ -42,9 +42,7 @@ const Hero = () => {
             className="flex items-center gap-2 mb-6"
           >
             <Sparkles size={14} className="text-primary" />
-            <p className="text-primary font-body text-sm tracking-[0.4em] uppercase mt-40">
-              South Sudan's Rising Star
-            </p>
+            <p className="text-primary font-body text-sm tracking-[0.4em] uppercase mt-40">South Sudan's Rising Star</p>
           </motion.div>
 
           <motion.h1
@@ -73,8 +71,8 @@ const Hero = () => {
             transition={{ delay: 0.85, duration: 0.8 }}
             className="font-body text-foreground/50 text-sm md:text-base max-w-lg mb-10 leading-relaxed"
           >
-            A voice that echoes the spirit of South Sudan — blending rich cultural heritage with
-            electrifying Afrobeats rhythms that captivate audiences across the globe.
+            A voice that echoes the spirit of South Sudan — blending rich cultural heritage with electrifying Afrobeats
+            rhythms that captivate audiences across the globe.
           </motion.p>
 
           <motion.div

@@ -1,6 +1,18 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { User, Mail, Phone, MessageSquare, CheckCircle, AlertCircle, Sparkles, Mic2, Handshake, Music, Newspaper } from "lucide-react";
+import {
+  User,
+  Mail,
+  Phone,
+  MessageSquare,
+  CheckCircle,
+  AlertCircle,
+  Sparkles,
+  Mic2,
+  Handshake,
+  Music,
+  Newspaper,
+} from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import { Badge } from "@/components/ui/badge";
@@ -61,15 +73,17 @@ const ContactForm = () => {
             <p className="text-primary font-body text-sm tracking-[0.4em] uppercase mb-3">Contact</p>
             <h2 className="font-heading text-4xl md:text-5xl mb-6 gold-text">Let's Create Magic</h2>
             <p className="font-body text-foreground/60 leading-relaxed mb-6">
-              Whether you're looking to <span className="text-primary font-semibold">book a performance</span>,
-              explore a <span className="text-primary font-semibold">brand collaboration</span>, or simply
-              connect with Achuei's world — this is where it begins.
+              Whether you're looking to <span className="text-primary font-semibold">book a performance</span>, explore
+              a <span className="text-primary font-semibold">brand collaboration</span>, or simply connect with Achuei's
+              world — this is where it begins.
             </p>
             <p className="font-body text-foreground/50 leading-relaxed mb-8">
-              For press inquiries, concert bookings, music licensing, or partnership opportunities,
-              drop a message and our team will respond within 24 hours.
+              For press inquiries, concert bookings, music licensing, or partnership opportunities, drop a message and
+              our team will respond within 24 hours.
             </p>
-            <Badge variant="secondary" className="mb-8">Fast Response</Badge>
+            <Badge variant="secondary" className="mb-8">
+              Fast Response
+            </Badge>
 
             <div className="space-y-4">
               {[

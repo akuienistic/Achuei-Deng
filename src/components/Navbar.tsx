@@ -46,11 +46,7 @@ const Navbar = () => {
           </a>
 
           {/* Mobile hamburger */}
-          <button
-            className="md:hidden text-primary"
-            onClick={() => setOpen(true)}
-            aria-label="Open menu"
-          >
+          <button className="md:hidden text-primary" onClick={() => setOpen(true)} aria-label="Open menu">
             <Menu size={24} />
           </button>
         </div>

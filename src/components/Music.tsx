@@ -1,0 +1,140 @@
+import { motion } from "framer-motion";
+import { Play, Headphones, Music2, Sparkles } from "lucide-react";
+
+const tracks = [
+  {
+    id: "yol-kewen",
+    title: "Yol Kewen",
+    embedUrl: "https://audiomack.com/embed/achuei-deng-ajing/song/yol-kewen?background=1",
+  },
+  {
+    id: "yol-kewen-2",
+    title: "Yol Kewen",
+    embedUrl: "https://audiomack.com/embed/achuei-deng-ajing/song/yol-kewen?background=1",
+  },
+];
+
+const Music = () => {
+  return (
+    <section id="music" className="section-padding bg-gradient-to-b from-background via-secondary/20 to-background relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex items-center justify-center gap-2 mb-4"
+          >
+            <Sparkles className="w-4 h-4 text-primary" />
+            <p className="text-primary font-body text-sm tracking-[0.4em] uppercase">
+              Latest Releases
+            </p>
+            <Sparkles className="w-4 h-4 text-primary" />
+          </motion.div>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6 gold-text"
+          >
+            Listen Now
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="font-body text-foreground/60 max-w-2xl mx-auto text-lg"
+          >
+            Stream Achuei Deng Ajiing's latest tracks on Audiomack. 
+            Feel the rhythm of authentic Afrobeat.
+          </motion.p>
+        </div>
+
+        {/* Music Cards */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {tracks.map((track, index) => (
+            <motion.div
+              key={track.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.15, duration: 0.6 }}
+              className="group"
+            >
+              <div className="glass-card rounded-2xl overflow-hidden border border-border/30 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1">
+                {/* Card Header */}
+                <div className="p-6 pb-4 border-b border-border/20 bg-gradient-to-r from-secondary/30 to-transparent">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center shadow-lg">
+                        <Music2 className="w-5 h-5 text-primary-foreground" />
+                      </div>
+                      <div>
+                        <h3 className="font-heading text-xl text-foreground group-hover:text-primary transition-colors">
+                          {track.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground font-body flex items-center gap-1">
+                          <Headphones className="w-3 h-3" />
+                          Achuei Deng Ajiing
+                        </p>
+                      </div>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Play className="w-4 h-4 text-primary fill-primary" />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Audiomack Embed */}
+                <div className="p-4 bg-gradient-to-b from-secondary/10 to-transparent">
+                  <div className="rounded-xl overflow-hidden shadow-inner bg-black/20">
+                    <iframe
+                      src={track.embedUrl}
+                      width="100%"
+                      height="252"
+                      scrolling="no"
+                      frameBorder="0"
+                      allow="autoplay"
+                      className="w-full"
+                      title={track.title}
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="text-center mt-16"
+        >
+          <a
+            href="https://audiomack.com/achuei-deng-ajing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 gold-gradient text-primary-foreground font-body font-semibold tracking-wider rounded-full hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl hover:shadow-primary/20"
+          >
+            <Headphones className="w-5 h-5" />
+            View All Tracks on Audiomack
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Music;

@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Events from "@/components/Events";
 import About from "@/components/About";
 import Stats from "@/components/Stats";
+import Music from "@/components/Music";
 import MusicVideos from "@/components/MusicVideos";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
@@ -22,6 +23,7 @@ const Index = () => {
         <Events />
         <About />
         <Stats />
+        <Music />
         <MusicVideos />
         <Testimonials />
         <ContactForm />
